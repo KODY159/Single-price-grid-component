@@ -1,0 +1,137 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Karla:ital@1&display=swap');
+
+/*Color variable*/
+:root {
+  /*background-color*/
+  --mainCyan: hsl(179, 62%, 43%);
+  --Cyan: hsla(179, 62%, 43%, 0.6);
+  --buttonColor: hsl(71, 73%, 54%);
+
+  /*Text*/
+  --mainParagraph: hsl(218, 22%, 67%);
+  --background: hsl(204, 43%, 93%);
+  --head: hsl(190, 62%, 43%);
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+body {
+  position: relative;
+  background-color: var(--background);
+  height: 100vh;
+}
+div.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*border: 1px solid red;*/
+  width: 730px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.05);
+} 
+/*Top side*/
+.topCard {
+  height: 50%;
+  background-color: white;
+  padding: 3rem;
+}
+.topCard>h2 {
+  color: var(--head);
+}
+.topCard>h3 {
+  padding-top: 25px;
+  color: var(--buttonColor);
+}
+.topCard>p {
+  padding-top: 15px;
+  line-height: 30px;
+  color: var(--mainParagraph);
+  font-size: 0.9rem;
+}
+
+/*Bottom left & right container*/
+div.row {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+}
+
+/*Bottom left side*/
+.Card-left {
+  background-color: var(--mainCyan);
+  flex: 50%;
+  padding: 3rem;
+}
+.Card-left>h3 {
+  color: var(--background);
+}
+.Card-left p {
+  padding-top: 20px;
+  color: var(--background);
+}
+.Card-left p>span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.Card-left .text {
+  padding-top: 10px;
+  font-size: 0.8rem;
+}
+.Card-left .button {
+  margin-top: 20px;
+  background-color: var(--buttonColor);
+  border: none;
+  border-radius: 5px;
+  padding: 15px 100px;
+  color: var(--background);
+  font-weight: bold;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.07);
+}
+
+/*Bottom right side*/
+.Card-right {
+  background-color: var(--mainCyan);
+  flex: 50%;
+  opacity: 0.7;
+  padding: 3rem;
+}
+.Card-right>h3 {
+  color: var(--background);
+}
+.Card-right ul {
+  margin-top: 20px;
+  list-style-type: none;
+}
+.Card-right ul li {
+  margin-top: 5px;
+  font-size: 0.75rem;
+  color: hsl(218, 35%, 81%);
+}
+
+@media only screen and (max-width: 975px) {
+  div.container {
+    height: auto;;
+    width: 400px;
+  }
+  div.row {
+    height: 100%;
+  }
+  .topCard {
+    padding: 1.5rem;
+  }
+  .Card-left {
+    padding: 1.5rem;
+  }
+  .Card-right {
+    padding: 1.5rem;
+  }
+}
